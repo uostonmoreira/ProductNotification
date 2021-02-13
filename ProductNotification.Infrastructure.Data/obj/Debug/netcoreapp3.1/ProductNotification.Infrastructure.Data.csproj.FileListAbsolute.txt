@@ -1,0 +1,12 @@
+C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Infrastructure.Data\bin\Debug\netcoreapp3.1\ProductNotification.Infrastructure.Data.deps.json
+C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Infrastructure.Data\bin\Debug\netcoreapp3.1\ProductNotification.Infrastructure.Data.dll
+C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Infrastructure.Data\bin\Debug\netcoreapp3.1\ProductNotification.Infrastructure.Data.pdb
+C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Infrastructure.Data\bin\Debug\netcoreapp3.1\ProductNotification.Domain.dll
+C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Infrastructure.Data\bin\Debug\netcoreapp3.1\ProductNotification.Domain.pdb
+C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Infrastructure.Data\obj\Debug\netcoreapp3.1\ProductNotification.Infrastructure.Data.csprojAssemblyReference.cache
+C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Infrastructure.Data\obj\Debug\netcoreapp3.1\ProductNotification.Infrastructure.Data.AssemblyInfoInputs.cache
+C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Infrastructure.Data\obj\Debug\netcoreapp3.1\ProductNotification.Infrastructure.Data.AssemblyInfo.cs
+C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Infrastructure.Data\obj\Debug\netcoreapp3.1\ProductNotification.Infrastructure.Data.csproj.CopyComplete
+C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Infrastructure.Data\obj\Debug\netcoreapp3.1\ProductNotification.Infrastructure.Data.dll
+C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Infrastructure.Data\obj\Debug\netcoreapp3.1\ProductNotification.Infrastructure.Data.pdb
+C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Infrastructure.Data\obj\Debug\netcoreapp3.1\ProductNotification.Infrastructure.Data.csproj.CoreCompileInputs.cache

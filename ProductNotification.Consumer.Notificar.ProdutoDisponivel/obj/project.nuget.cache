@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "TPN36LqlwoXW5tVrhPEuPNdEzlKx4zZN/Ssq4N4MFjLJmAufACd07TZ0/hy4aRDnKVl+/uDxm47gkMvJ8Gy3sg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\uoston.bomfim\\Desktop\\ProductNotification\\ProductNotification.Consumer.Notificar.ProdutoDisponivel\\ProductNotification.Consumer.Notificar.ProdutoDisponivel.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\uoston.bomfim\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.8\\microsoft.extensions.dependencyinjection.3.1.8.nupkg.sha512",
+    "C:\\Users\\uoston.bomfim\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.8\\microsoft.extensions.dependencyinjection.abstractions.3.1.8.nupkg.sha512",
+    "C:\\Users\\uoston.bomfim\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",
+    "C:\\Users\\uoston.bomfim\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\uoston.bomfim\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}
