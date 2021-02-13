@@ -91,3 +91,4 @@ C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Domain.Te
 C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Domain.Test\obj\Debug\netcoreapp3.1\ProductNotification.Domain.Test.dll
 C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Domain.Test\obj\Debug\netcoreapp3.1\ProductNotification.Domain.Test.pdb
 C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Domain.Test\obj\Debug\netcoreapp3.1\ProductNotification.Domain.Test.genruntimeconfig.cache
+C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Domain.Test\obj\Debug\netcoreapp3.1\ProductNotification.Domain.Test.csprojAssemblyReference.cache

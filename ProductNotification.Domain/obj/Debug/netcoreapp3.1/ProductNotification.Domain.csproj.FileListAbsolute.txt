@@ -6,3 +6,4 @@ C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Domain\ob
 C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Domain\obj\Debug\netcoreapp3.1\ProductNotification.Domain.csproj.CoreCompileInputs.cache
 C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Domain\obj\Debug\netcoreapp3.1\ProductNotification.Domain.dll
 C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Domain\obj\Debug\netcoreapp3.1\ProductNotification.Domain.pdb
+C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Domain\obj\Debug\netcoreapp3.1\ProductNotification.Domain.csprojAssemblyReference.cache
