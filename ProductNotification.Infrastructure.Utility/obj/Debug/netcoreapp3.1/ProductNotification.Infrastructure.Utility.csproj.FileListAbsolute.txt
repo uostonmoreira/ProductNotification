@@ -1,8 +1,0 @@
-C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Infrastructure.Utility\bin\Debug\netcoreapp3.1\ProductNotification.Infrastructure.Utility.deps.json
-C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Infrastructure.Utility\bin\Debug\netcoreapp3.1\ProductNotification.Infrastructure.Utility.dll
-C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Infrastructure.Utility\bin\Debug\netcoreapp3.1\ProductNotification.Infrastructure.Utility.pdb
-C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Infrastructure.Utility\obj\Debug\netcoreapp3.1\ProductNotification.Infrastructure.Utility.AssemblyInfoInputs.cache
-C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Infrastructure.Utility\obj\Debug\netcoreapp3.1\ProductNotification.Infrastructure.Utility.AssemblyInfo.cs
-C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Infrastructure.Utility\obj\Debug\netcoreapp3.1\ProductNotification.Infrastructure.Utility.csproj.CoreCompileInputs.cache
-C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Infrastructure.Utility\obj\Debug\netcoreapp3.1\ProductNotification.Infrastructure.Utility.dll
-C:\Users\uoston.bomfim\Desktop\ProductNotification\ProductNotification.Infrastructure.Utility\obj\Debug\netcoreapp3.1\ProductNotification.Infrastructure.Utility.pdb
