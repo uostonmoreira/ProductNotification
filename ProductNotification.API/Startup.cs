@@ -1,15 +1,23 @@
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Newtonsoft.Json;
 using ProductNotification.API.Extensions;
+using ProductNotification.Infrastructure.Data.Context;
 using ProductNotification.Infrastructure.IoC;
 using ProductNotification.Infrastructure.Utility;
+using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Net.Mime;
 
 namespace ProductNotification.API
 {
@@ -46,6 +54,8 @@ namespace ProductNotification.API
                 .Build();
 
             services.AddControllers();
+            services.AddHealthChecks()
+                .AddDbContextCheck<ContextDB>();
 
             services.AddDependencies(configuration);
 
@@ -100,12 +110,34 @@ namespace ProductNotification.API
                 });
             }
 
+            app.UseHealthChecks("/ProductNotification/check",
+              new HealthCheckOptions()
+              {
+                  ResponseWriter = async (context, report) =>
+                  {
+                      var result = JsonConvert.SerializeObject(
+                          new
+                          {
+                              statusApplication = report.Status.ToString(),
+                              healthChecks = report.Entries.Select(e => new
+                              {
+                                  check = e.Key,
+                                  ErrorMessage = e.Value.Exception?.Message,
+                                  status = Enum.GetName(typeof(HealthStatus), e.Value.Status)
+                              })
+                          });
+                      context.Response.ContentType = MediaTypeNames.Application.Json;
+                      await context.Response.WriteAsync(result);
+                  }
+              });
+
             //Global Exception Handler
             app.ConfigureExceptionHandler(logger);
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHealthChecksUI();
             });
         }
     }
