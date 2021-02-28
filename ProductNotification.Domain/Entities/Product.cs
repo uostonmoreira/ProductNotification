@@ -1,5 +1,4 @@
 ﻿using ProductNotification.Domain.Enumerations;
-using ProductNotification.Domain.Interfaces.Mensageria;
 
 namespace ProductNotification.Domain.Entities
 {

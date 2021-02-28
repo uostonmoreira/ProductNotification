@@ -48,8 +48,11 @@ namespace ProductNotification.API.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> GetAsync(int codigo)
+        public async Task<IActionResult> GetByIdAsync(int codigo)
         {
+            if (codigo == 0)
+                return BadRequest("Parâmetros de entrada não informado");
+
             _logger.LogDebug($"Iniciando requisição de busca em: {DateTime.Now}");
             var result = await _productRepository.GetByIdAsync(codigo);
             _logger.LogDebug($"Finalizando requisição de busca em: {DateTime.Now}");
@@ -78,9 +81,9 @@ namespace ProductNotification.API.Controllers
             _logger.LogDebug($"Finalizando persistência de dados em: {DateTime.Now}");
 
             if (result == 0)
-                return BadRequest("Operação não realizada");
+                return StatusCode(502, "Ocorreu um erro ao tentar processar sua requisição");
 
-            return Ok();
+            return Ok("Produto cadastrado com sucesso!!!");
         }
 
         [HttpDelete]
@@ -99,10 +102,10 @@ namespace ProductNotification.API.Controllers
             var result = await _productRepository.DeleteAsync(product);
             _logger.LogDebug($"Finalizando persistência de dados em: {DateTime.Now}");
 
-            if(result==0)
-                return BadRequest("Operação não realizada");
+            if (result == 0)
+                return StatusCode(502, "Ocorreu um erro ao tentar processar sua requisição");
 
-            return Ok();
+            return Ok("Produto excluído com sucesso!!!");
         }
 
         [HttpPut]
@@ -122,9 +125,9 @@ namespace ProductNotification.API.Controllers
             _logger.LogDebug($"Finalizando persistência de dados em: {DateTime.Now}");
 
             if (result == 0)
-                return BadRequest("Operação não realizada");
+                return StatusCode(502, "Ocorreu um erro ao tentar processar sua requisição");
 
-            return Ok();
+            return Ok("Produto atualizado com sucesso!!!");
         }
     }
 }
