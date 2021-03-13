@@ -1,11 +1,11 @@
-﻿using RabbitMQ.Client;
-using System;
+﻿using System;
+using System.Threading.Tasks;
 
 namespace ProductNotification.Domain.Interfaces.Mensageria
 {
-    public interface IMensageria<TEntity>
+    public interface IMensageria
     {
-        public void EnviaMensagem(TEntity obj, string fila);
-        public void LerMensagem(string fila, Action<string> action);
+        Task SendMessageAsync<TEntity>(TEntity entity);
+        Task ReceiveMessagesAsync<TEntity>(Action<TEntity> action);
     }
 }

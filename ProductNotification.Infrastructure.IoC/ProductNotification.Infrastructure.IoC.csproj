@@ -10,8 +10,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ProductNotification.Application\ProductNotification.Application.csproj" />
     <ProjectReference Include="..\ProductNotification.Infrastructure.Data\ProductNotification.Infrastructure.Data.csproj" />
     <ProjectReference Include="..\ProductNotification.Infrastructure.RabbitMQ\ProductNotification.Infrastructure.RabbitMQ.csproj" />
+    <ProjectReference Include="..\ProductNotification.Infrastructure.ServiceBus\ProductNotification.Infrastructure.ServiceBus.csproj" />
   </ItemGroup>
 
 </Project>

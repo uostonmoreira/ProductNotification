@@ -53,6 +53,9 @@ namespace ProductNotification.API
                 .AddEnvironmentVariables()
                 .Build();
 
+            services.AddSingleton(logger);
+            services.AddSingleton(loggerFactory);
+
             services.AddControllers();
             services.AddHealthChecks()
                 .AddDbContextCheck<ContextDB>();

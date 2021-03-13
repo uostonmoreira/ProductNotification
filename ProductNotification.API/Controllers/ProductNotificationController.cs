@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using ProductNotification.Application.Interfaces;
 using ProductNotification.Domain.Entities;
 using ProductNotification.Domain.Interfaces.Repository;
 using System;
@@ -15,14 +16,17 @@ namespace ProductNotification.API.Controllers
     {
         private readonly ILogger<ProductNotificationController> _logger;
         private readonly IProductRepository _productRepository;
+        private readonly IProductApplication _productApplication;
 
         public ProductNotificationController(
                                                 ILogger<ProductNotificationController> logger,
-                                                IProductRepository productRepository
+                                                IProductRepository productRepository,
+                                                IProductApplication productApplication
                                             )
         {
             this._logger = logger;
             this._productRepository = productRepository;
+            this._productApplication = productApplication;
         }
 
         [HttpGet]
@@ -77,7 +81,7 @@ namespace ProductNotification.API.Controllers
                 return BadRequest("Parâmetros de entrada não informados");
 
             _logger.LogDebug($"Iniciando persistência de dados em: {DateTime.Now}");
-            var result = await _productRepository.InsertAsync(product);
+            var result = await this._productApplication.InsertAsync(product);
             _logger.LogDebug($"Finalizando persistência de dados em: {DateTime.Now}");
 
             if (result == 0)
