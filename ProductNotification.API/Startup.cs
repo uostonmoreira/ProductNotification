@@ -34,6 +34,7 @@ namespace ProductNotification.API
             opt
             .AddConsole()
             .AddDebug()
+            .AddApplicationInsights()
             .AddConfiguration(Configuration.GetSection("Logging")));
 
             logger = loggerFactory.CreateLogger<Startup>();
@@ -59,6 +60,8 @@ namespace ProductNotification.API
             services.AddControllers();
             services.AddHealthChecks()
                 .AddDbContextCheck<ContextDB>();
+
+            services.AddApplicationInsightsTelemetry();
 
             services.AddDependencies(configuration);
 
