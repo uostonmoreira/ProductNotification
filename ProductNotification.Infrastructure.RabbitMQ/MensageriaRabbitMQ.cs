@@ -82,6 +82,8 @@ namespace ProductNotification.Infrastructure.RabbitMQ
             IConnection connection = CreateConnection(_connectionFactory);
             QueueDeclareOk queue = CreateQueue(_configuration["Mensageria:RabbitMQ:QueueName"], connection);
             WriteMessageOnQueue(JsonConvert.SerializeObject(entity), _configuration["Mensageria:RabbitMQ:QueueName"], connection);
+
+            await Task.CompletedTask;
         }
 
         public async Task ReceiveMessagesAsync<TEntity>(Action<TEntity> action)
@@ -108,6 +110,8 @@ namespace ProductNotification.Infrastructure.RabbitMQ
                 channel.BasicConsume(_configuration["Mensageria:RabbitMQ:QueueName"], true, consumer);
 
                 Console.ReadLine();
+
+                await Task.CompletedTask;
             }
         }
     }

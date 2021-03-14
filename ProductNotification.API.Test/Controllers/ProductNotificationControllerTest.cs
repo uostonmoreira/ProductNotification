@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
 using ProductNotification.API.Controllers;
+using ProductNotification.Application.Interfaces;
 using ProductNotification.Domain.Entities;
 using ProductNotification.Domain.Interfaces.Repository;
 using System;
@@ -17,16 +18,19 @@ namespace ProductNotification.API.Test.Controllers
     {
         private readonly ProductNotificationController _productNotificationController;
         private readonly Mock<IProductRepository> _productRepository;
+        private readonly Mock<IProductApplication> _productApplication;
         private readonly Mock<ILogger<ProductNotificationController>> _logger;
 
         public ProductNotificationControllerTest()
         {
             this._logger = new Mock<ILogger<ProductNotificationController>>();
             this._productRepository = new Mock<IProductRepository>();
+            this._productApplication = new Mock<IProductApplication>();
 
             this._productNotificationController = new ProductNotificationController(
                 this._logger.Object,
-                this._productRepository.Object
+                this._productRepository.Object,
+                this._productApplication.Object
             );
         }
 
