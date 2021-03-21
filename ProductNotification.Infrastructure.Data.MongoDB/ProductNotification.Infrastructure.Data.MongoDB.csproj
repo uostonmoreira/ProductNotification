@@ -5,8 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MongoDB.Driver" Version="2.12.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Faturamento.Agrupador.Dados.Utils\Faturamento.Agrupador.Dados.Utils.csproj" />
     <ProjectReference Include="..\ProductNotification.Domain\ProductNotification.Domain.csproj" />
-    <ProjectReference Include="..\ProductNotification.Infrastructure.Data.MongoDB\ProductNotification.Infrastructure.Data.MongoDB.csproj" />
   </ItemGroup>
 
 </Project>
