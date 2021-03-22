@@ -1,26 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using k8s.KubeConfigModels;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ProductNotification.Domain.Interfaces.Repository;
 using ProductNotification.Domain.Interfaces.Services;
+using System;
+using System.Threading.Tasks;
 
 namespace ProductNotification.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TokenController : ControllerBase
+    public class AuthController : ControllerBase
     {
-        private readonly ILogger<TokenController> _logger;
+        private readonly ILogger<AuthController> _logger;
         private readonly IUserRepository _userRepository;
         private readonly ITokenService _tokenService;
 
-        public TokenController(ILogger<TokenController> logger, ITokenService tokenService, IUserRepository userRepository)
+        public AuthController(ILogger<AuthController> logger, ITokenService tokenService, IUserRepository userRepository)
         {
             this._logger = logger;
             this._tokenService = tokenService;
