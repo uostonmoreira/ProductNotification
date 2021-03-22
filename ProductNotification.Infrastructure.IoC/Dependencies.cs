@@ -5,6 +5,8 @@ using ProductNotification.Application;
 using ProductNotification.Application.Interfaces;
 using ProductNotification.Domain.Interfaces.Mensageria;
 using ProductNotification.Domain.Interfaces.Repository;
+using ProductNotification.Domain.Interfaces.Services;
+using ProductNotification.Domain.Services;
 using ProductNotification.Infrastructure.Data.Context;
 using ProductNotification.Infrastructure.Data.Repositories;
 using ProductNotification.Infrastructure.RabbitMQ;
@@ -22,6 +24,8 @@ namespace ProductNotification.Infrastructure.IoC
             services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IProductApplication, ProductApplication>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<ITokenService, TokenService>();
             services.AddDbContext<ContextDB>(opt => opt.UseInMemoryDatabase("MockDb"));
 
             // Mensageria
