@@ -12,6 +12,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ProductNotification.Domain\ProductNotification.Domain.csproj" />
     <ProjectReference Include="..\ProductNotification.Infrastructure.Data.MongoDB\ProductNotification.Infrastructure.Data.MongoDB.csproj" />
+    <ProjectReference Include="..\ProductNotification.Infrastructure.Utility\ProductNotification.Infrastructure.Utility.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">

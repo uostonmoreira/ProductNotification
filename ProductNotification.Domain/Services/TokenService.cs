@@ -29,7 +29,9 @@ namespace ProductNotification.Domain.Services
                 Expires = DateTime.UtcNow.AddMinutes(30),
                 SigningCredentials = new SigningCredentials(
                     new SymmetricSecurityKey(key),
-                    SecurityAlgorithms.HmacSha256Signature)
+                    SecurityAlgorithms.HmacSha256Signature),
+                Issuer = this._configuration["JWT:Issuer"],
+                Audience = this._configuration["JWT:Audience"]
             };
 
             var token = tokenHandler.CreateToken(tokenDescriptor);

@@ -3,6 +3,7 @@ using MongoDB.Driver.Linq;
 using ProductNotification.Domain.Entities;
 using ProductNotification.Domain.Interfaces.Repository;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -36,6 +37,19 @@ namespace ProductNotification.Infrastructure.Data.MongoDB
             try
             {
                 return this._mongoCollection.AsQueryable();
+            }
+            catch (MongoClientException ex) { throw ex; }
+            catch (MongoConnectionException ex) { throw ex; }
+            catch (MongoInternalException ex) { throw ex; }
+            catch (MongoServerException ex) { throw ex; }
+            catch (MongoException ex) { throw ex; }
+        }
+
+        public async Task<IEnumerable<TEntity>> GetAsync(FilterDefinition<TEntity> filter)
+        {
+            try
+            {
+                return await this._mongoCollection.FindAsync<TEntity>(filter).Result.ToListAsync(); ;
             }
             catch (MongoClientException ex) { throw ex; }
             catch (MongoConnectionException ex) { throw ex; }

@@ -1,10 +1,7 @@
-﻿using Faturamento.Agrupador.Dados.Utils;
-using MongoDB.Driver;
-using MongoDB.Driver.Linq;
+﻿using MongoDB.Driver;
 using ProductNotification.Domain.Entities;
 using ProductNotification.Domain.Interfaces.Repository;
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace ProductNotification.Infrastructure.Data.MongoDB
@@ -16,12 +13,8 @@ namespace ProductNotification.Infrastructure.Data.MongoDB
         {}
         public async Task<IEnumerable<Notification>> GetByFilterAsync(int productId)
         {
-            
-            var notificatios = await (
-                      await this.GetAsync()
-                          .Where(n => n.ProductId == productId)
-                          .ToCursorAsync()
-              ).FetchAllAsync();
+            var filter = Builders<Notification>.Filter.Eq(x => x.ProductId, productId);
+            var notificatios = await this.GetAsync(filter);
 
             return notificatios;
         }
